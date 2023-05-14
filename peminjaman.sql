@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 02, 2023 at 08:58 AM
--- Server version: 8.0.30
--- PHP Version: 8.1.10
+-- Waktu pembuatan: 14 Bulan Mei 2023 pada 16.01
+-- Versi server: 8.0.30
+-- Versi PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,33 +18,33 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `saparung`
+-- Database: `peminjaman`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data_penduduk`
+-- Struktur dari tabel `data_penduduk`
 --
 
 CREATE TABLE `data_penduduk` (
   `id_data` int NOT NULL,
-  `nik` varchar(16) COLLATE utf16_unicode_ci NOT NULL,
-  `nama` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `jk` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `tempat_lhr` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `nik` varchar(16) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `nama` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `jk` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `tempat_lhr` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `tgl_lhr` date NOT NULL,
-  `agama` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `pendidikan` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `agama` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `pendidikan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `alamat` text CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
-  `status` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `pekerjaan` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `ortu` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `status` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `pekerjaan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `ortu` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `user_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `data_penduduk`
+-- Dumping data untuk tabel `data_penduduk`
 --
 
 INSERT INTO `data_penduduk` (`id_data`, `nik`, `nama`, `jk`, `tempat_lhr`, `tgl_lhr`, `agama`, `pendidikan`, `alamat`, `status`, `pekerjaan`, `ortu`, `user_id`) VALUES
@@ -54,21 +54,21 @@ INSERT INTO `data_penduduk` (`id_data`, `nik`, `nama`, `jk`, `tempat_lhr`, `tgl_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `domisili`
+-- Struktur dari tabel `domisili`
 --
 
 CREATE TABLE `domisili` (
   `id_domisili` int NOT NULL,
   `tanggal` date NOT NULL,
-  `kode` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `nomor` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `kode` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `nomor` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `data_id` int NOT NULL,
-  `keperluan` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `qr` varchar(255) COLLATE utf16_unicode_ci NOT NULL
+  `keperluan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `qr` varchar(255) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `domisili`
+-- Dumping data untuk tabel `domisili`
 --
 
 INSERT INTO `domisili` (`id_domisili`, `tanggal`, `kode`, `nomor`, `data_id`, `keperluan`, `qr`) VALUES
@@ -79,26 +79,26 @@ INSERT INTO `domisili` (`id_domisili`, `tanggal`, `kode`, `nomor`, `data_id`, `k
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kematian`
+-- Struktur dari tabel `kematian`
 --
 
 CREATE TABLE `kematian` (
   `id_kematian` int NOT NULL,
   `tanggal` date NOT NULL,
-  `kode` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `nomor` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `kode` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `nomor` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `data_id` int NOT NULL,
   `tgl_mati` date NOT NULL,
-  `sebab` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `jam_mati` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `meninggal_di` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `jam_kubur` varchar(12) COLLATE utf16_unicode_ci NOT NULL,
-  `dikuburkan_di` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `qr` varchar(255) COLLATE utf16_unicode_ci NOT NULL
+  `sebab` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `jam_mati` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `meninggal_di` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `jam_kubur` varchar(12) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `dikuburkan_di` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `qr` varchar(255) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `kematian`
+-- Dumping data untuk tabel `kematian`
 --
 
 INSERT INTO `kematian` (`id_kematian`, `tanggal`, `kode`, `nomor`, `data_id`, `tgl_mati`, `sebab`, `jam_mati`, `meninggal_di`, `jam_kubur`, `dikuburkan_di`, `qr`) VALUES
@@ -109,21 +109,21 @@ INSERT INTO `kematian` (`id_kematian`, `tanggal`, `kode`, `nomor`, `data_id`, `t
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kepolisian`
+-- Struktur dari tabel `kepolisian`
 --
 
 CREATE TABLE `kepolisian` (
   `id_kepolisian` int NOT NULL,
   `tanggal` date NOT NULL,
-  `kode` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `nomor` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `kode` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `nomor` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `data_id` int NOT NULL,
-  `keperluan` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `qr` varchar(255) COLLATE utf16_unicode_ci NOT NULL
+  `keperluan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `qr` varchar(255) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `kepolisian`
+-- Dumping data untuk tabel `kepolisian`
 --
 
 INSERT INTO `kepolisian` (`id_kepolisian`, `tanggal`, `kode`, `nomor`, `data_id`, `keperluan`, `qr`) VALUES
@@ -136,25 +136,25 @@ INSERT INTO `kepolisian` (`id_kepolisian`, `tanggal`, `kode`, `nomor`, `data_id`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `keramaian`
+-- Struktur dari tabel `keramaian`
 --
 
 CREATE TABLE `keramaian` (
   `id_keramaian` int NOT NULL,
   `tanggal` date NOT NULL,
-  `kode` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `nomor` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `kode` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `nomor` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `data_id` int NOT NULL,
-  `jenis_kegiatan` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `acara` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `jenis_kegiatan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `acara` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `tgl_acara` date NOT NULL,
-  `jam` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `tempat` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `qr` varchar(255) COLLATE utf16_unicode_ci NOT NULL
+  `jam` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `tempat` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `qr` varchar(255) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `keramaian`
+-- Dumping data untuk tabel `keramaian`
 --
 
 INSERT INTO `keramaian` (`id_keramaian`, `tanggal`, `kode`, `nomor`, `data_id`, `jenis_kegiatan`, `acara`, `tgl_acara`, `jam`, `tempat`, `qr`) VALUES
@@ -164,20 +164,73 @@ INSERT INTO `keramaian` (`id_keramaian`, `tanggal`, `kode`, `nomor`, `data_id`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `surat_masuk`
+-- Struktur dari tabel `ormawa`
+--
+
+CREATE TABLE `ormawa` (
+  `id` int NOT NULL,
+  `nama` varchar(25) NOT NULL,
+  `singkatan` varchar(25) NOT NULL,
+  `ketua` varchar(25) NOT NULL,
+  `wakil` varchar(25) NOT NULL,
+  `sekretaris` varchar(25) NOT NULL,
+  `bendahara` varchar(25) NOT NULL,
+  `dosen` varchar(25) NOT NULL,
+  `thn_jabatan` year NOT NULL,
+  `foto` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ruangan`
+--
+
+CREATE TABLE `ruangan` (
+  `id` int NOT NULL,
+  `kode` varchar(25) NOT NULL,
+  `nama` varchar(25) NOT NULL,
+  `deskripsi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `surat`
+--
+
+CREATE TABLE `surat` (
+  `id` int NOT NULL,
+  `no_surat` varchar(25) NOT NULL,
+  `tgl_surat` date NOT NULL,
+  `nama` varchar(25) NOT NULL,
+  `tujuan` varchar(25) NOT NULL,
+  `id_ormawa` int NOT NULL,
+  `id_ruangan` int NOT NULL,
+  `tgl_pinjam` date NOT NULL,
+  `lama_pinjam` int NOT NULL,
+  `waktu_mulai` time NOT NULL,
+  `waktu_selesai` time NOT NULL,
+  `deskripsi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `surat_masuk`
 --
 
 CREATE TABLE `surat_masuk` (
   `id_sm` int NOT NULL,
   `tgl_terima` date NOT NULL,
   `tgl_surat` date NOT NULL,
-  `no_surat` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `isi_surat` text COLLATE utf16_unicode_ci NOT NULL,
-  `tujuan` varchar(128) COLLATE utf16_unicode_ci NOT NULL
+  `no_surat` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `isi_surat` text CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `tujuan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `surat_masuk`
+-- Dumping data untuk tabel `surat_masuk`
 --
 
 INSERT INTO `surat_masuk` (`id_sm`, `tgl_terima`, `tgl_surat`, `no_surat`, `isi_surat`, `tujuan`) VALUES
@@ -188,29 +241,29 @@ INSERT INTO `surat_masuk` (`id_sm`, `tgl_terima`, `tgl_surat`, `no_surat`, `isi_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `taksiran_tanah`
+-- Struktur dari tabel `taksiran_tanah`
 --
 
 CREATE TABLE `taksiran_tanah` (
   `id_tt` int NOT NULL,
   `tanggal` date NOT NULL,
-  `kode` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `kode` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `nomor` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `data_id` int NOT NULL,
-  `nop` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `kelas` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `nop` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `kelas` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `luas` int NOT NULL,
   `harga` int NOT NULL,
-  `utara` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `timur` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `selatan` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `barat` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `keperluan` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `qr` varchar(255) COLLATE utf16_unicode_ci NOT NULL
+  `utara` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `timur` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `selatan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `barat` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `keperluan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `qr` varchar(255) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `taksiran_tanah`
+-- Dumping data untuk tabel `taksiran_tanah`
 --
 
 INSERT INTO `taksiran_tanah` (`id_tt`, `tanggal`, `kode`, `nomor`, `data_id`, `nop`, `kelas`, `luas`, `harga`, `utara`, `timur`, `selatan`, `barat`, `keperluan`, `qr`) VALUES
@@ -219,23 +272,23 @@ INSERT INTO `taksiran_tanah` (`id_tt`, `tanggal`, `kode`, `nomor`, `data_id`, `n
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usaha`
+-- Struktur dari tabel `usaha`
 --
 
 CREATE TABLE `usaha` (
   `id_usaha` int NOT NULL,
   `tanggal` date NOT NULL,
-  `kode` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `nomor` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `kode` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `nomor` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `data_id` int NOT NULL,
-  `jenis_usaha` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `alamat_usaha` text COLLATE utf16_unicode_ci NOT NULL,
-  `keperluan` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `qr` varchar(255) COLLATE utf16_unicode_ci NOT NULL
+  `jenis_usaha` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `alamat_usaha` text CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `keperluan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `qr` varchar(255) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `usaha`
+-- Dumping data untuk tabel `usaha`
 --
 
 INSERT INTO `usaha` (`id_usaha`, `tanggal`, `kode`, `nomor`, `data_id`, `jenis_usaha`, `alamat_usaha`, `keperluan`, `qr`) VALUES
@@ -245,33 +298,33 @@ INSERT INTO `usaha` (`id_usaha`, `tanggal`, `kode`, `nomor`, `data_id`, `jenis_u
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
   `id_user` int NOT NULL,
-  `name` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `email` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `image` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `password` varchar(256) COLLATE utf16_unicode_ci NOT NULL,
+  `name` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `email` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `image` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `password` varchar(256) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `role_id` int NOT NULL,
   `is_active` int NOT NULL,
   `date_created` int NOT NULL,
-  `jabatan` varchar(128) COLLATE utf16_unicode_ci NOT NULL
+  `jabatan` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id_user`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`, `jabatan`) VALUES
-(9, 'Aldi Jaya Mulyana', 'aldikakabow28@gmail.com', 'Picture13.jpg', '$2y$10$NbmeMljxqxYkO0LpEqqnzOjJ7PH5wBeDbFJ.y3ZjDtlX2lZpdPZD2', 1, 1, 1665241651, 'Operator Desa is'),
+(9, 'Aldi Jaya Mulyana', 'noormzzz07@gmail.com', 'Picture13.jpg', '$2y$10$v1A6XU/VXxHB4KhG0QO1eO0KbribJwGAtfFKNXA5U1oaEFrS3Kj8y', 1, 1, 1665241651, 'Operator Desa is'),
 (35, 'Aldi Jaya Mulyana', 'aldijaya280902@gmail.com', 'Screenshot_(128).png', '$2y$10$Hn09PbuI5RFI5M8vcfFbSekDKWabTped1zeVTiB91c9iX3odF6bwm', 2, 1, 1672718238, 'Sekretaris Desa');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_access_menu`
+-- Struktur dari tabel `user_access_menu`
 --
 
 CREATE TABLE `user_access_menu` (
@@ -281,7 +334,7 @@ CREATE TABLE `user_access_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `user_access_menu`
+-- Dumping data untuk tabel `user_access_menu`
 --
 
 INSERT INTO `user_access_menu` (`id_am`, `role_id`, `menu_id`) VALUES
@@ -298,21 +351,22 @@ INSERT INTO `user_access_menu` (`id_am`, `role_id`, `menu_id`) VALUES
 (23, 9, 4),
 (24, 9, 5),
 (26, 10, 4),
-(40, 1, 2);
+(40, 1, 2),
+(41, 1, 29);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_menu`
+-- Struktur dari tabel `user_menu`
 --
 
 CREATE TABLE `user_menu` (
   `id_menu` int NOT NULL,
-  `menu` varchar(128) COLLATE utf16_unicode_ci NOT NULL
+  `menu` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `user_menu`
+-- Dumping data untuk tabel `user_menu`
 --
 
 INSERT INTO `user_menu` (`id_menu`, `menu`) VALUES
@@ -320,21 +374,22 @@ INSERT INTO `user_menu` (`id_menu`, `menu`) VALUES
 (2, 'Surat'),
 (3, 'Data'),
 (4, 'User'),
-(5, 'Menu');
+(5, 'Menu'),
+(29, 'Peminjaman');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_role`
+-- Struktur dari tabel `user_role`
 --
 
 CREATE TABLE `user_role` (
   `id_role` int NOT NULL,
-  `role` varchar(128) COLLATE utf16_unicode_ci NOT NULL
+  `role` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `user_role`
+-- Dumping data untuk tabel `user_role`
 --
 
 INSERT INTO `user_role` (`id_role`, `role`) VALUES
@@ -344,20 +399,20 @@ INSERT INTO `user_role` (`id_role`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_sub_menu`
+-- Struktur dari tabel `user_sub_menu`
 --
 
 CREATE TABLE `user_sub_menu` (
   `id_submenu` int NOT NULL,
   `menu_id` int NOT NULL,
-  `title` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `url` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `icon` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
+  `title` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `url` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `icon` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `is_active` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `user_sub_menu`
+-- Dumping data untuk tabel `user_sub_menu`
 --
 
 INSERT INTO `user_sub_menu` (`id_submenu`, `menu_id`, `title`, `url`, `icon`, `is_active`) VALUES
@@ -389,23 +444,26 @@ INSERT INTO `user_sub_menu` (`id_submenu`, `menu_id`, `title`, `url`, `icon`, `i
 (29, 2, 'Surat Masuk', 'surat/suratmasuk', 'fa fa-fw fa-envelope', 1),
 (32, 3, 'Data Penduduk', 'data', 'fa fa-fw fa-book', 1),
 (34, 1, 'Staff Desa', 'admin/staff', 'fa fa-fw fa-briefcase', 1),
-(35, 2, 'Surat Keluar', 'surat/suratkeluar', 'fa fa-fw fa-envelope-open', 1);
+(35, 2, 'Surat Keluar', 'surat/suratkeluar', 'fa fa-fw fa-envelope-open', 1),
+(40, 29, 'Ruangan', 'peminjaman/ruangan', 'fa fa-fw fa-house', 1),
+(41, 29, 'Ormawa', 'ormawa', 'fa fa-fw fa-people-group', 1),
+(42, 29, 'Surat', 'surat', 'fa fa-fw fa-envelope', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_token`
+-- Struktur dari tabel `user_token`
 --
 
 CREATE TABLE `user_token` (
   `id_token` int NOT NULL,
-  `email` varchar(128) COLLATE utf16_unicode_ci NOT NULL,
-  `token` varchar(129) COLLATE utf16_unicode_ci NOT NULL,
+  `email` varchar(128) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
+  `token` varchar(129) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
   `date_created` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 --
--- Dumping data for table `user_token`
+-- Dumping data untuk tabel `user_token`
 --
 
 INSERT INTO `user_token` (`id_token`, `email`, `token`, `date_created`) VALUES
@@ -431,240 +489,276 @@ INSERT INTO `user_token` (`id_token`, `email`, `token`, `date_created`) VALUES
 --
 
 --
--- Indexes for table `data_penduduk`
+-- Indeks untuk tabel `data_penduduk`
 --
 ALTER TABLE `data_penduduk`
   ADD PRIMARY KEY (`id_data`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `domisili`
+-- Indeks untuk tabel `domisili`
 --
 ALTER TABLE `domisili`
   ADD PRIMARY KEY (`id_domisili`),
   ADD KEY `data_id_domisili` (`data_id`);
 
 --
--- Indexes for table `kematian`
+-- Indeks untuk tabel `kematian`
 --
 ALTER TABLE `kematian`
   ADD PRIMARY KEY (`id_kematian`),
   ADD KEY `data_id_kematian` (`data_id`);
 
 --
--- Indexes for table `kepolisian`
+-- Indeks untuk tabel `kepolisian`
 --
 ALTER TABLE `kepolisian`
   ADD PRIMARY KEY (`id_kepolisian`),
   ADD KEY `data_id_kepolisian` (`data_id`);
 
 --
--- Indexes for table `keramaian`
+-- Indeks untuk tabel `keramaian`
 --
 ALTER TABLE `keramaian`
   ADD PRIMARY KEY (`id_keramaian`),
   ADD KEY `data_id_keramaian` (`data_id`);
 
 --
--- Indexes for table `surat_masuk`
+-- Indeks untuk tabel `ormawa`
+--
+ALTER TABLE `ormawa`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `ruangan`
+--
+ALTER TABLE `ruangan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `surat`
+--
+ALTER TABLE `surat`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `surat_masuk`
 --
 ALTER TABLE `surat_masuk`
   ADD PRIMARY KEY (`id_sm`);
 
 --
--- Indexes for table `taksiran_tanah`
+-- Indeks untuk tabel `taksiran_tanah`
 --
 ALTER TABLE `taksiran_tanah`
   ADD PRIMARY KEY (`id_tt`),
   ADD KEY `data_id_tt` (`data_id`);
 
 --
--- Indexes for table `usaha`
+-- Indeks untuk tabel `usaha`
 --
 ALTER TABLE `usaha`
   ADD PRIMARY KEY (`id_usaha`),
   ADD KEY `data_id_usaha` (`data_id`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`),
   ADD KEY `role_id_user` (`role_id`);
 
 --
--- Indexes for table `user_access_menu`
+-- Indeks untuk tabel `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
   ADD PRIMARY KEY (`id_am`);
 
 --
--- Indexes for table `user_menu`
+-- Indeks untuk tabel `user_menu`
 --
 ALTER TABLE `user_menu`
   ADD PRIMARY KEY (`id_menu`);
 
 --
--- Indexes for table `user_role`
+-- Indeks untuk tabel `user_role`
 --
 ALTER TABLE `user_role`
   ADD PRIMARY KEY (`id_role`);
 
 --
--- Indexes for table `user_sub_menu`
+-- Indeks untuk tabel `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
   ADD PRIMARY KEY (`id_submenu`),
   ADD KEY `menu_id` (`menu_id`);
 
 --
--- Indexes for table `user_token`
+-- Indeks untuk tabel `user_token`
 --
 ALTER TABLE `user_token`
   ADD PRIMARY KEY (`id_token`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `data_penduduk`
+-- AUTO_INCREMENT untuk tabel `data_penduduk`
 --
 ALTER TABLE `data_penduduk`
   MODIFY `id_data` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `domisili`
+-- AUTO_INCREMENT untuk tabel `domisili`
 --
 ALTER TABLE `domisili`
   MODIFY `id_domisili` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
--- AUTO_INCREMENT for table `kematian`
+-- AUTO_INCREMENT untuk tabel `kematian`
 --
 ALTER TABLE `kematian`
   MODIFY `id_kematian` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `kepolisian`
+-- AUTO_INCREMENT untuk tabel `kepolisian`
 --
 ALTER TABLE `kepolisian`
   MODIFY `id_kepolisian` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT for table `keramaian`
+-- AUTO_INCREMENT untuk tabel `keramaian`
 --
 ALTER TABLE `keramaian`
   MODIFY `id_keramaian` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `surat_masuk`
+-- AUTO_INCREMENT untuk tabel `ormawa`
+--
+ALTER TABLE `ormawa`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `ruangan`
+--
+ALTER TABLE `ruangan`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `surat`
+--
+ALTER TABLE `surat`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `surat_masuk`
 --
 ALTER TABLE `surat_masuk`
   MODIFY `id_sm` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT for table `taksiran_tanah`
+-- AUTO_INCREMENT untuk tabel `taksiran_tanah`
 --
 ALTER TABLE `taksiran_tanah`
   MODIFY `id_tt` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `usaha`
+-- AUTO_INCREMENT untuk tabel `usaha`
 --
 ALTER TABLE `usaha`
   MODIFY `id_usaha` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT for table `user_access_menu`
+-- AUTO_INCREMENT untuk tabel `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id_am` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_am` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
--- AUTO_INCREMENT for table `user_menu`
+-- AUTO_INCREMENT untuk tabel `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id_menu` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_menu` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT for table `user_role`
+-- AUTO_INCREMENT untuk tabel `user_role`
 --
 ALTER TABLE `user_role`
   MODIFY `id_role` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `user_sub_menu`
+-- AUTO_INCREMENT untuk tabel `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id_submenu` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_submenu` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT for table `user_token`
+-- AUTO_INCREMENT untuk tabel `user_token`
 --
 ALTER TABLE `user_token`
   MODIFY `id_token` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `data_penduduk`
+-- Ketidakleluasaan untuk tabel `data_penduduk`
 --
 ALTER TABLE `data_penduduk`
   ADD CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `domisili`
+-- Ketidakleluasaan untuk tabel `domisili`
 --
 ALTER TABLE `domisili`
   ADD CONSTRAINT `data_id_domisili` FOREIGN KEY (`data_id`) REFERENCES `data_penduduk` (`id_data`) ON DELETE CASCADE ON UPDATE RESTRICT;
 
 --
--- Constraints for table `kematian`
+-- Ketidakleluasaan untuk tabel `kematian`
 --
 ALTER TABLE `kematian`
   ADD CONSTRAINT `data_id_kematian` FOREIGN KEY (`data_id`) REFERENCES `data_penduduk` (`id_data`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `kepolisian`
+-- Ketidakleluasaan untuk tabel `kepolisian`
 --
 ALTER TABLE `kepolisian`
   ADD CONSTRAINT `data_id_kepolisian` FOREIGN KEY (`data_id`) REFERENCES `data_penduduk` (`id_data`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `keramaian`
+-- Ketidakleluasaan untuk tabel `keramaian`
 --
 ALTER TABLE `keramaian`
   ADD CONSTRAINT `data_id_keramaian` FOREIGN KEY (`data_id`) REFERENCES `data_penduduk` (`id_data`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
--- Constraints for table `taksiran_tanah`
+-- Ketidakleluasaan untuk tabel `taksiran_tanah`
 --
 ALTER TABLE `taksiran_tanah`
   ADD CONSTRAINT `data_id_tt` FOREIGN KEY (`data_id`) REFERENCES `data_penduduk` (`id_data`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `usaha`
+-- Ketidakleluasaan untuk tabel `usaha`
 --
 ALTER TABLE `usaha`
   ADD CONSTRAINT `data_id_usaha` FOREIGN KEY (`data_id`) REFERENCES `data_penduduk` (`id_data`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `user`
+-- Ketidakleluasaan untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `role_id_user` FOREIGN KEY (`role_id`) REFERENCES `user_role` (`id_role`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `user_sub_menu`
+-- Ketidakleluasaan untuk tabel `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
   ADD CONSTRAINT `menu_id` FOREIGN KEY (`menu_id`) REFERENCES `user_menu` (`id_menu`) ON DELETE CASCADE ON UPDATE CASCADE;
